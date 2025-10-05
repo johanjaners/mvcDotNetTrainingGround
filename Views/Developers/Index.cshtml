@@ -19,7 +19,13 @@
                 <td>@developer.Name</td>
                 <td>@developer.Email</td>
                 <td>
-                    @Html.ActionLink("Details", "Details", "Developers", new { id = developer.Id})
+                    <a 
+                        asp-controller="Developer"
+                        asp-action="Details"
+                        asp-route-id="@developer.Id"
+                    >
+                        Details
+                    </a>
                 </td>
             </tr>
         }
