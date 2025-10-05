@@ -18,4 +18,18 @@ public class DevelopersController : Controller
         return View(developer);
     }
     public IActionResult Create() => View();
+    [HttpPost]
+    public IActionResult Create(CreateNewDeveloperViewModel viewModel)
+    {
+        var nextId = _db.Developers.Count + 1;
+        var developerToAdd = new Developer()
+        {
+            Id = nextId,
+            Name = viewModel.Name,
+            Email = viewModel.Email
+        };
+        _db.Developers.Add(developerToAdd);
+        
+        return RedirectToAction(nameof(Index));
+    }
 }
