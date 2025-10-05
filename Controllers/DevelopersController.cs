@@ -17,4 +17,8 @@ public class DevelopersController : Controller
         if (developer == null) return NotFound();
         return View(developer);
     }
+    public IActionResult Create()
+    {
+        return View();
+    }
 }
