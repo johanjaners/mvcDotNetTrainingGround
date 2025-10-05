@@ -12,5 +12,9 @@ public class DevelopersController : Controller
     }
     [HttpGet("")]
     [HttpGet("Index")]
-    public IActionResult Index() => View(_db.Developers);
+    public IActionResult Index()
+    {
+        ViewData["Developers"] = _db.Developers;
+        return View();
+    }
 }
