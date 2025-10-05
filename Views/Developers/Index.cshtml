@@ -4,6 +4,8 @@
 
 <a asp-controller="Developers" asp-action="Create">Create new developer</a>
 
+
+
 <table style="width: 100%">
     <thead>
         <tr>
@@ -21,11 +23,7 @@
                 <td>@developer.Name</td>
                 <td>@developer.Email</td>
                 <td>
-                    <a 
-                        asp-controller="Developers" 
-                        asp-action="Details" 
-                        asp-route-id="@developer.Id">Details
-                    </a>
+                    <a asp-controller="Developers" asp-action="Details" asp-route-id="@developer.Id">Details</a>
                 </td>
             </tr>
         }
