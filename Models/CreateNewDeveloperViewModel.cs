@@ -1,8 +1,6 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
 namespace mvcDotNetTrainingGround.Models;
-
 public class CreateNewDeveloperViewModel
 {
     [DisplayName("Developer Name")]
