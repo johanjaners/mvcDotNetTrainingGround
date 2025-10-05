@@ -1,3 +1,21 @@
 @model List<Developer>
 
 <h1>Showing @Model.Count developers!</h1>
+
+<table style="width: 100%"
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var developer in Model)
+        {
+            <tr>
+                <td>@developer.Name</td>
+                <td>@developer.Email</td>
+            </tr>
+        }
+    </tbody>
+<table/>
