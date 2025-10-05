@@ -2,7 +2,7 @@
 
 <h1>Showing @Model.Count developers!</h1>
 
-<table style="width: 100%"
+<table style="width: 100%">
     <thead>
         <tr>
             <th>Name</th>
@@ -19,15 +19,9 @@
                 <td>@developer.Name</td>
                 <td>@developer.Email</td>
                 <td>
-                    <a 
-                        asp-controller="Developer"
-                        asp-action="Details"
-                        asp-route-id="@developer.Id"
-                    >
-                        Details
-                    </a>
+                    @Html.ActionLink("Details", "Details", "Developers", new { id = developer.Id }, null)
                 </td>
             </tr>
         }
     </tbody>
-<table/>
+</table>

@@ -1,7 +1,7 @@
 @model Developer
 <h1>@Model.Name</h1>
 <ul>
-    <li>Id: @Model.Id</li>
-    <li>Name: @Model.Name</li>
-    <li>Email: @Model.Email</li>
+    <li>@Html.DisplayNameFor(m => m.Name) : @Model.Name</li>
+    <li>@Html.DisplayNameFor(m => m.Email): @Model.Email</li>
 </ul>
+<a asp-controller="Developers" asp-action="Index">Back to list</a>
