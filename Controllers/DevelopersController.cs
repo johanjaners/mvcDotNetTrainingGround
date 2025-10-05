@@ -13,4 +13,10 @@ public class DevelopersController : Controller
     [HttpGet("")]
     [HttpGet("Index")]
     public IActionResult Index() => View(_db.Developers);
+
+    public IActionResult Details(int id)
+    {
+        var developer = _db.Developers.Find(d => d.Id == id);
+        return View(developer);
+    }
 }
