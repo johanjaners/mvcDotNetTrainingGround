@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using mvcDotNetTrainingGround.Models; // Db
 namespace mvcDotNetTrainingGround.Controllers;
-public class DeveloperControllers : Controller
+
+[Route("[controller]")]
+public class DevelopersController : Controller
 {
     private Db _db;
-    public DeveloperControllers(Db db)
+    public DevelopersController(Db db)
     {
         _db = db;
     }
+    [HttpGet("")]
+    [HttpGet("Index")]
     public IActionResult Index() => View(_db.Developers);
 }
