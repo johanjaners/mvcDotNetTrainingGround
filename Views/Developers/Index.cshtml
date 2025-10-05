@@ -1,6 +1,3 @@
-@{
-    var developers = ViewData ["Developers"] as List<Developer>;
-}
+@model List<Developer>
 
-<h1>Showing @developers.Count developers!</h1>
-
+<h1>Showing @Model.Count developers!</h1>
